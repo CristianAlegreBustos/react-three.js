@@ -2,7 +2,9 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Tarjeta(props) {
-  const { nodes, materials } = useGLTF("https://cristianalegrebustos.github.io/WebAr/webxlWorkshop/assets/tarjeta3d.glb");
+  const { nodes, materials } = useGLTF(
+    "https://cristianalegrebustos.github.io/WebAr/webxlWorkshop/assets/tarjeta3d.glb"
+  );
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0, 0.28]} scale={[0.33, 0.51, 0]}>
@@ -25,4 +27,6 @@ export default function Tarjeta(props) {
   );
 }
 
-useGLTF.preload("https://cristianalegrebustos.github.io/WebAr/webxlWorkshop/assets/tarjeta3d.glb");
+useGLTF.preload(
+  "https://cristianalegrebustos.github.io/WebAr/webxlWorkshop/assets/tarjeta3d.glb"
+);
