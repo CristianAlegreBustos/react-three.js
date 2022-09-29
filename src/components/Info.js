@@ -4,17 +4,20 @@ import { useEffect,useState } from 'react';
 
 const Info= ()=>{
     const [isSupported, setSupported] = useState(true)
-    /*useEffect(() => {
+    useEffect(() => {
       navigator.xr
         .isSessionSupported('immersive-ar')
         .then(value => setSupported(value))
-    }, [])*/
+    }, [])
 
     return(
         <div >
+    {!isSupported && (
       <MessageNotSupported/>
-
+    )}
+  {isSupported && (
       <MessageSupported/>
+  )}
 
   </div>
     )
