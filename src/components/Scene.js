@@ -40,7 +40,7 @@ const Scene=({Onclick})=>{
          <pointLight position={[10, 10, 10]} />
           {/* <Box position={[-1.2, 0, 0]} />
           <Box position={[1.2, 0, 0]} />   */}
-          <Tarjeta position={[0,0,-1]} />
+          <Tarjeta onSelect={console.log("HOLA")} position={[0,0,-1]} />
           </XR>
       </Canvas>
       </>

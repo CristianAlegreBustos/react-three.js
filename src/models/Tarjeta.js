@@ -20,7 +20,7 @@ useFrame((state, delta) => {
 
 })
   return (
-    <group {...props} dispose={null} ref={tarjeta} >
+    <group  onSelect={console.log("HOLA3")} {...props} dispose={null} ref={tarjeta} >
       {/* <group position={[0, 0, 0.28]} scale={[0.33, 0.51, 0]}>
         <mesh
           castShadow
@@ -29,8 +29,9 @@ useFrame((state, delta) => {
           material={materials["33"]}
         />
       </group> */}
-      <group position={[0, 0, 0.25]} scale={[0.31, 0.49, 0.24]}>
+      <group  onSelect={console.log("HOLA2")} position={[0, 0, 0.25]} scale={[0.31, 0.49, 0.24]}>
         <mesh
+          onSelect={console.log("HOLA")}
           castShadow
           receiveShadow
           geometry={nodes.node_id8.geometry}
