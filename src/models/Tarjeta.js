@@ -1,10 +1,9 @@
 import React, {useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
-import { useLoader } from '@react-three/fiber'
+import { useGLTF } from "@react-three/drei";
 
 export default function Tarjeta(props) {
-    const obj = useLoader(OBJLoader, 'https://cristianalegrebustos.github.io/react-three.js/src/assets/TarjetaImagenCerrada.obj')
+const { nodes, materials } = useGLTF("src/assets/caja.gltf");
 
   const tarjeta= useRef()
 
@@ -15,6 +14,23 @@ export default function Tarjeta(props) {
   ) 
 
   return (
-   <primitive object={obj} ref={tarjeta}/>
+    <group {...props} dispose={null} ref={tarjeta}>
+    <group position={[63.97, -52.53, -79.97]} rotation={[Math.PI / 2, 0, 0]}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Caja_sorpresa_1.geometry}
+        material={materials.diffuse_White}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Caja_sorpresa_2.geometry}
+        material={materials.diffuse_0}
+      />
+    </group>
+  </group>
   );
 }
+
+useGLTF.preload("src/assets/caja.gltf");
