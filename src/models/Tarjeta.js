@@ -4,7 +4,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { useLoader } from '@react-three/fiber'
 
 export default function Tarjeta(props) {
-    const obj = useLoader(OBJLoader, 'https://cristianalegrebustos.github.io/react-three.js/src/assets/CajaSorpresa.obj')
+    const obj = useLoader(OBJLoader, 'https://cristianalegrebustos.github.io/react-three.js/src/assets/TarjetaImagenCerrada.obj')
 
   const tarjeta= useRef()
 
