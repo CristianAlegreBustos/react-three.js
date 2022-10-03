@@ -9,8 +9,7 @@ const Info= ()=>{
         .isSessionSupported('immersive-ar')
         .then(value => setSupported(value))
     }, [])
-
-    return(
+return(
         <div >
     {!isSupported && (
       <MessageNotSupported/>

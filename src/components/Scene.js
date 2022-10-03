@@ -1,9 +1,7 @@
-import { useFrame,Canvas,useLoader } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import {useRef,useState} from 'react'
+import { Canvas} from '@react-three/fiber'
 import { XR, ARButton, Interactive} from '@react-three/xr'
-import Tarjeta from '../models/Tarjeta'
-
+import Tarjeta from '../models/Tarjeta.js'
+import BoxBeneficios from '../models/BoxBeneficios.js'
 
 
 const Scene=({Onclick})=>{
@@ -18,7 +16,10 @@ const Scene=({Onclick})=>{
           <Interactive onSelect={()=>console.log("HOLA")}>
           <Tarjeta  position={[0,0,-1.5]}  />
           </Interactive>
-         
+          <BoxBeneficios position={[-0.35,0.2,-1.5]} />
+          <BoxBeneficios position={[0.5,0.2,-1.5]}  />
+          <BoxBeneficios position={[0.5,-0.2,-1.5]}  />
+          <BoxBeneficios position={[-0.35,-0.2,-1.5]}  /> 
           </XR>
       </Canvas>
       </>

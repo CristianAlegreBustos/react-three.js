@@ -17,7 +17,7 @@ const MessageSupported=()=>{
         </div>
       </div>}
        
-      {<Scene Onclick={setDisplay}/>}
+      <Scene Onclick={setDisplay}/>
 
       </>
     )
